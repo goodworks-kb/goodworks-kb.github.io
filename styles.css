@@ -46,9 +46,20 @@ body {
     align-items: center;
 }
 
-.logo img {
-    height: 50px;
-    width: auto;
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.logo-kb {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 .nav-menu {
@@ -333,9 +344,9 @@ section {
 }
 
 .footer-logo img {
-    height: 40px;
+    height: 60px;
     width: auto;
-    filter: brightness(0) invert(1);
+    margin-bottom: 0.5rem;
 }
 
 .footer p {
