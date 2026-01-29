@@ -450,9 +450,12 @@ section {
 }
 
 .prior-note {
+    display: block;
     color: var(--text-light);
     font-style: italic;
     font-weight: normal;
+    margin-top: 0.25rem;
+    padding-left: 1.5rem;
 }
 
 /* Contact Section */
