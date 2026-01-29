@@ -100,4 +100,12 @@ document.addEventListener('DOMContentLoaded', () => {
         aboutContent.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(aboutContent);
     }
+    
+    const founderCards = document.querySelectorAll('.founder-card');
+    founderCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+    });
 });
