@@ -1,0 +1,16 @@
+{
+  "name": "goodworks-kb",
+  "version": "1.0.0",
+  "description": "Good Works KB - Website Building Services Landing Page",
+  "scripts": {
+    "serve": "npx http-server -p 8000 -o",
+    "start": "npm run serve"
+  },
+  "keywords": [
+    "website",
+    "landing-page",
+    "goodworks-kb"
+  ],
+  "author": "Good Works KB",
+  "license": "MIT"
+}
