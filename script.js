@@ -31,23 +31,59 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact Form Handling
-const contactForm = document.getElementById('contactForm');
+// Contact Form Handling - Supabase Edge Function Integration
+const SUPABASE_URL = "https://vdswtxjgqdizoarkusuh.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZkc3d0eGpncWRpem9hcmt1c3VoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk4MDE2NDYsImV4cCI6MjA4NTM3NzY0Nn0.UAHfyDRvOGT84j7jLGDNawXts90oJMZgiIiuGTgLbfs";
+
+// Initialize Supabase client (avoiding naming conflict with global supabase)
+let supabaseClient = null;
+const getSupabaseClient = () => {
+    if (!supabaseClient) {
+        if (typeof window.supabase === 'undefined') {
+            throw new Error('Supabase library not loaded');
+        }
+        supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    }
+    return supabaseClient;
+};
+
+const contactForm = document.getElementById('contact');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        
-        // Here you would typically send the form data to a server
-        // For now, we'll just show an alert
-        alert(`Thank you for your message, ${name}! We'll get back to you at ${email} soon.`);
-        
-        // Reset form
-        contactForm.reset();
+        const form = e.target;
+        const status = document.getElementById('status');
+        status.textContent = "Sending...";
+
+        const fd = new FormData(form);
+        const payload = Object.fromEntries(fd.entries());
+
+        // Skip submission if honeypot field is filled (spam detection)
+        if (payload.hp) {
+            status.textContent = "";
+            return;
+        }
+
+        payload.form_name = "contact";
+        payload.page_url = location.href;
+        payload.referrer = document.referrer;
+        payload.utm = Object.fromEntries(new URLSearchParams(location.search));
+
+        try {
+            const client = getSupabaseClient();
+            const { data, error } = await client.functions.invoke('submit-form', {
+                body: payload
+            });
+
+            if (error) throw error;
+            if (!data || !data.ok) throw new Error(data?.error || "Failed");
+            
+            status.textContent = "Received. We'll get back to you soon.";
+            form.reset();
+        } catch (err) {
+            console.error(err);
+            status.textContent = "Failed to send. Try again.";
+        }
     });
 }
 

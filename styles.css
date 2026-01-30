@@ -532,6 +532,16 @@ section {
     resize: vertical;
 }
 
+#status {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    min-height: 1.5rem;
+}
+
+#status:empty {
+    display: none;
+}
+
 /* Footer */
 .footer {
     background: var(--primary-color);
