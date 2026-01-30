@@ -138,10 +138,20 @@ body {
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--text-light);
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.hero-motto {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--accent-color);
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.05em;
+    font-weight: 500;
 }
 
 .hero-buttons {
