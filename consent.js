@@ -22,7 +22,7 @@
                 <div class="consent-actions">
                     <button id="consent-accept" class="consent-btn consent-btn-accept" aria-label="Accept cookies">Accept</button>
                     <button id="consent-decline" class="consent-btn consent-btn-decline" aria-label="Decline cookies">Decline</button>
-                    <a href="#privacy" id="consent-learn-more" class="consent-link" aria-label="Learn more about our cookie policy">Learn more</a>
+                    <a href="privacy.html" id="consent-learn-more" class="consent-link" aria-label="Learn more about our cookie policy">Learn more</a>
                 </div>
             </div>
         </div>
@@ -186,17 +186,8 @@
         document.getElementById('consent-accept').addEventListener('click', handleAccept);
         document.getElementById('consent-decline').addEventListener('click', handleDecline);
         
-        // Learn more link - scroll to privacy section or handle as needed
-        const learnMoreLink = document.getElementById('consent-learn-more');
-        learnMoreLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            // If you have a privacy section, scroll to it
-            const privacySection = document.getElementById('privacy') || document.querySelector('[id*="privacy"]');
-            if (privacySection) {
-                privacySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-            // Otherwise, you could open a modal or navigate to a privacy page
-        });
+        // Learn more link - navigates to privacy policy page
+        // Link is already set to href="privacy.html" in the HTML, so no additional handler needed
 
         // Inject minimal CSS if not already present
         injectConsentStyles();
