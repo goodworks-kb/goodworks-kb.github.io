@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example - GDPR Cookie Consent</title>
+</head>
+<body>
+    <h1>Example Page</h1>
+    <p>This page demonstrates how to include the GDPR cookie consent system.</p>
+    
+    <!-- 
+        IMPORTANT: Include consent.js BEFORE any analytics scripts.
+        The consent system will handle loading Google Analytics only after user consent.
+    -->
+    <script src="consent.js"></script>
+    
+    <!-- 
+        Other scripts can go here.
+        Analytics will be loaded dynamically by consent.js if user accepts.
+    -->
+    
+    <!-- 
+        Optional: Add a privacy section with id="privacy" for the "Learn more" link
+    -->
+    <section id="privacy" style="margin-top: 100vh; padding: 2rem;">
+        <h2>Privacy Policy</h2>
+        <p>Your privacy policy content goes here...</p>
+    </section>
+    
+    <!-- 
+        Optional: Add a button to reset consent (for testing or user preference changes)
+    -->
+    <button onclick="resetConsent()" style="margin-top: 2rem; padding: 0.5rem 1rem;">
+        Reset Cookie Consent
+    </button>
+</body>
+</html>
