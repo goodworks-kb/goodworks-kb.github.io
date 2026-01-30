@@ -47,21 +47,15 @@ body {
 }
 
 .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
     text-decoration: none;
-    color: var(--primary-color);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
 }
 
-.logo-kb-img {
-    height: 1.8rem;
+.logo-wide-img {
+    height: 2.5rem;
     width: auto;
-    vertical-align: middle;
-    display: inline-block;
-    margin-left: 0.2rem;
+    display: block;
 }
 
 .nav-menu {
