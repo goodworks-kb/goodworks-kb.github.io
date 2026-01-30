@@ -52,6 +52,7 @@
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -120,11 +121,11 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
-                <a href="#" class="logo" aria-label="Good Works KB Home"><img src="assets/logo-wide.png" alt="Good Works KB - Professional Web Design and Development Services" class="logo-wide-img" width="200" height="50"></a>
+                <a href="index.html" class="logo" aria-label="Good Works KB Home"><img src="assets/logo-wide.png" alt="Good Works KB - Professional Web Design and Development Services" class="logo-wide-img" width="200" height="50"></a>
                 <ul class="nav-menu">
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#services" data-i18n="navServices">Services</a></li>
+                    <li><a href="#about" data-i18n="navAbout">About</a></li>
+                    <li><a href="#contact" data-i18n="navContact">Contact</a></li>
                 </ul>
                 <button class="nav-toggle" aria-label="Toggle navigation">
                     <span></span>
@@ -143,12 +144,12 @@
                     <img src="assets/animation-monitor.gif" alt="Web development and design animation showcasing modern web experiences" class="hero-gif">
                 </div>
                 <div class="hero-text">
-                    <h1 class="hero-title">Building Web Experiences<br>That Work</h1>
-                    <p class="hero-subtitle">We create beautiful, functional web experiences that help your business grow and connect with your audience.</p>
-                    <p class="hero-motto">Leading with Integrity</p>
+                    <h1 class="hero-title" data-i18n="heroTitle" data-i18n-html>Building Web Experiences<br>That Work</h1>
+                    <p class="hero-subtitle" data-i18n="heroSubtitle">We create beautiful, functional web experiences that help your business grow and connect with your audience.</p>
+                    <p class="hero-motto" data-i18n="heroMotto">Leading with Integrity</p>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Get Started</a>
-                        <a href="#services" class="btn btn-secondary">Our Services</a>
+                        <a href="#contact" class="btn btn-primary" data-i18n="heroGetStarted">Get Started</a>
+                        <a href="#services" class="btn btn-secondary" data-i18n="heroOurServices">Our Services</a>
                     </div>
                 </div>
             </div>
@@ -160,39 +161,39 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2 class="section-title">About Us</h2>
-                    <p class="about-description">Good Works KB was founded by experienced builders who've worked across technology, infrastructure, and community-driven organizations.</p>
-                    <p class="about-description">Our background shapes a simple belief: good work should still be good years from now—technically, aesthetically, and ethically.</p>
+                    <h2 class="section-title" data-i18n="aboutTitle">About Us</h2>
+                    <p class="about-description" data-i18n="aboutDescription1">Good Works KB was founded by experienced builders who've worked across technology, infrastructure, and community-driven organizations.</p>
+                    <p class="about-description" data-i18n="aboutDescription2">Our background shapes a simple belief: good work should still be good years from now—technically, aesthetically, and ethically.</p>
                 </div>
                 
                 <div class="principles-section">
-                    <h3 class="principles-header">Serving Community and Commerce</h3>
-                    <p class="principles-subtitle">One set of principles. Two contexts.</p>
+                    <h3 class="principles-header" data-i18n="principlesHeader">Serving Community and Commerce</h3>
+                    <p class="principles-subtitle" data-i18n="principlesSubtitle">One set of principles. Two contexts.</p>
                     <div class="principles-content">
-                        <p>Good Works KB operates at the intersection of community life and commercial enterprise.</p>
-                        <p>We believe the same disciplines—clarity, restraint, durability, and accountability—should apply whether we're supporting a local organization or a growing business.</p>
-                        <p>Our community-facing work keeps us grounded in service and responsibility. Our commercial work keeps our systems sharp, sustainable, and professionally rigorous. Each informs the other.</p>
+                        <p data-i18n="principlesContent1">Good Works KB operates at the intersection of community life and commercial enterprise.</p>
+                        <p data-i18n="principlesContent2">We believe the same disciplines—clarity, restraint, durability, and accountability—should apply whether we're supporting a local organization or a growing business.</p>
+                        <p data-i18n="principlesContent3">Our community-facing work keeps us grounded in service and responsibility. Our commercial work keeps our systems sharp, sustainable, and professionally rigorous. Each informs the other.</p>
                     </div>
                 </div>
                 
                 <div class="founders-section">
-                    <h3 class="founders-title">Founders</h3>
+                    <h3 class="founders-title" data-i18n="foundersTitle">Founders</h3>
                     <div class="founders-grid">
                         <div class="founder-card">
                             <div class="founder-image">
                                 <img src="assets/headshot-rk.PNG" alt="Richard Kim, CEO and Co-founder of Good Works KB" id="richard-kim-photo" width="200" height="200" loading="lazy">
                             </div>
                             <h4 class="founder-name">Richard Kim</h4>
-                            <p class="founder-title">CEO</p>
-                            <p class="founder-bio">A senior cybersecurity and risk leader with experience spanning government, financial services, and high-growth technology organizations. Has built and led security programs covering governance, compliance, incident response, and enterprise risk for institutions operating at significant scale and public trust. Brings a steady, relationship-driven approach to protecting sensitive systems while aligning security with organizational mission and accountability.</p>
+                            <p class="founder-title" data-i18n="founderCEO">CEO</p>
+                            <p class="founder-bio" data-i18n="richardBio">A senior cybersecurity and risk leader with experience spanning government, financial services, and high-growth technology organizations. Has built and led security programs covering governance, compliance, incident response, and enterprise risk for institutions operating at significant scale and public trust. Brings a steady, relationship-driven approach to protecting sensitive systems while aligning security with organizational mission and accountability.</p>
                             <ul class="founder-priors">
                                 <li>
                                     <span class="prior-company">Major Metropolitan District Attorney's Office</span>
-                                    <span class="prior-title">Chief Information Security Officer (CISO)</span>
+                                    <span class="prior-title" data-i18n="priorCISO">Chief Information Security Officer (CISO)</span>
                                 </li>
                                 <li>
                                     <span class="prior-company">Major International Bank</span>
-                                    <span class="prior-title">Deputy CISO</span>
+                                    <span class="prior-title" data-i18n="priorDeputyCISO">Deputy CISO</span>
                                 </li>
                                 <li>
                                     <span class="prior-company">
@@ -201,7 +202,7 @@
                                         </a>
                                         <a href="https://www.onepeloton.com/" target="_blank" rel="noopener noreferrer">Peloton</a>
                                     </span>
-                                    <span class="prior-title">Senior Risk analyst</span>
+                                    <span class="prior-title" data-i18n="priorSeniorRisk">Senior Risk analyst</span>
                                 </li>
                             </ul>
                         </div>
@@ -210,8 +211,8 @@
                                 <img src="assets/headshot-bk.PNG" alt="Brian Kim, CTO and Co-founder of Good Works KB" id="brian-kim-photo" width="200" height="200" loading="lazy">
                             </div>
                             <h4 class="founder-name">Brian Kim</h4>
-                            <p class="founder-title">CTO</p>
-                            <p class="founder-bio">An experienced technology builder working across cybersecurity, cloud infrastructure, and applied AI, focused on creating systems that are stable, trustworthy, and built to last. Has helped organizations design and operate platforms that handle real-world scale, complexity, and risk without sacrificing clarity. Brings a stewardship-oriented mindset shaped by both commercial delivery and community-focused work.</p>
+                            <p class="founder-title" data-i18n="founderCTO">CTO</p>
+                            <p class="founder-bio" data-i18n="brianBio">An experienced technology builder working across cybersecurity, cloud infrastructure, and applied AI, focused on creating systems that are stable, trustworthy, and built to last. Has helped organizations design and operate platforms that handle real-world scale, complexity, and risk without sacrificing clarity. Brings a stewardship-oriented mindset shaped by both commercial delivery and community-focused work.</p>
                             <ul class="founder-priors">
                                 <li>
                                     <span class="prior-company">
@@ -228,7 +229,7 @@
                                         </a>
                                         <a href="https://paperspace.com" target="_blank" rel="noopener noreferrer">Paperspace</a>
                                     </span>
-                                    <span class="prior-note">(Acquired by Digital Ocean)</span>
+                                    <span class="prior-note" data-i18n="priorAcquired">(Acquired by Digital Ocean)</span>
                                 </li>
                                 <li>
                                     <span class="prior-company">
@@ -265,38 +266,38 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Everything you need to establish a strong online presence</p>
+            <h2 class="section-title" data-i18n="servicesTitle">Our Services</h2>
+            <p class="section-subtitle" data-i18n="servicesSubtitle">Everything you need to establish a strong online presence</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🎨</div>
-                    <h3>Custom Web Design</h3>
-                    <p>Unique, responsive designs tailored to your brand and business goals. We create web experiences that look great on all devices.</p>
+                    <h3 data-i18n="serviceCustomDesign">Custom Web Design</h3>
+                    <p data-i18n="serviceCustomDesignDesc">Unique, responsive designs tailored to your brand and business goals. We create web experiences that look great on all devices.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">⚡</div>
-                    <h3>Fast & Optimized</h3>
-                    <p>Lightning-fast load times and SEO optimization to ensure your web experience performs well and ranks high in search results.</p>
+                    <h3 data-i18n="serviceFastOptimized">Fast & Optimized</h3>
+                    <p data-i18n="serviceFastOptimizedDesc">Lightning-fast load times and SEO optimization to ensure your web experience performs well and ranks high in search results.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔧</div>
-                    <h3>Maintenance & Support</h3>
-                    <p>Ongoing support and maintenance to keep your web experience secure, updated, and running smoothly.</p>
+                    <h3 data-i18n="serviceMaintenance">Maintenance & Support</h3>
+                    <p data-i18n="serviceMaintenanceDesc">Ongoing support and maintenance to keep your web experience secure, updated, and running smoothly.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">📱</div>
-                    <h3>Mobile Responsive</h3>
-                    <p>Every web experience we build is fully responsive, ensuring a perfect experience on smartphones, tablets, and desktops.</p>
+                    <h3 data-i18n="serviceMobile">Mobile Responsive</h3>
+                    <p data-i18n="serviceMobileDesc">Every web experience we build is fully responsive, ensuring a perfect experience on smartphones, tablets, and desktops.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🛒</div>
-                    <h3>E-Commerce Solutions</h3>
-                    <p>Complete online store setup with secure payment processing and inventory management.</p>
+                    <h3 data-i18n="serviceEcommerce">E-Commerce Solutions</h3>
+                    <p data-i18n="serviceEcommerceDesc">Complete online store setup with secure payment processing and inventory management.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">📊</div>
-                    <h3>Analytics & Insights</h3>
-                    <p>Track your web experience's performance with integrated analytics and regular reporting.</p>
+                    <h3 data-i18n="serviceAnalytics">Analytics & Insights</h3>
+                    <p data-i18n="serviceAnalyticsDesc">Track your web experience's performance with integrated analytics and regular reporting.</p>
                 </div>
             </div>
         </div>
@@ -305,25 +306,25 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Let's Build Something Great</h2>
-            <p class="section-subtitle">Ready to get started? Get in touch and let's discuss your project.</p>
+            <h2 class="section-title" data-i18n="contactTitle">Let's Build Something Great</h2>
+            <p class="section-subtitle" data-i18n="contactSubtitle">Ready to get started? Get in touch and let's discuss your project.</p>
             <div class="contact-content">
                 <form class="contact-form" id="contact">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Name">
+                        <label for="name" data-i18n="contactName">Name</label>
+                        <input type="text" id="name" name="name" data-i18n="contactName" placeholder="Name">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <label for="email" data-i18n="contactEmail">Email</label>
+                        <input type="email" id="email" name="email" data-i18n="contactEmail" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                        <label for="message" data-i18n="contactMessage">Message</label>
+                        <textarea id="message" name="message" rows="5" data-i18n="contactMessage" placeholder="Message" required></textarea>
                     </div>
                     <!-- honeypot -->
                     <input name="hp" style="display:none" autocomplete="off" tabindex="-1">
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary" data-i18n="contactSend">Send Message</button>
                     <p id="status"></p>
                 </form>
             </div>
@@ -337,15 +338,21 @@
                 <div class="footer-logo">
                     <img src="assets/logo-square-black.png" alt="Good Works KB - Professional Web Design and Development Services" width="50" height="50" loading="lazy">
                 </div>
-                <p>&copy; 2026 Good Works KB. All rights reserved.</p>
+                <p>&copy; 2026 Good Works KB. <span data-i18n="footerRights">All rights reserved.</span></p>
                 <div style="margin-top: 1rem;">
-                    <a href="privacy.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; margin: 0 1rem;">Privacy Policy</a>
-                    <a href="terms.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; margin: 0 1rem;">Terms of Service</a>
+                    <a href="privacy.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; margin: 0 1rem;" data-i18n="footerPrivacy">Privacy Policy</a>
+                    <a href="terms.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; margin: 0 1rem;" data-i18n="footerTerms">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Translations - Must load before language switcher -->
+    <script src="translations.js"></script>
+    
+    <!-- Language Switcher - Must load before other scripts -->
+    <script src="language-switcher.js"></script>
+    
     <!-- GDPR Cookie Consent - Must load before analytics -->
     <script src="consent.js"></script>
     

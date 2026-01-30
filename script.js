@@ -53,7 +53,9 @@ if (contactForm) {
         e.preventDefault();
         const form = e.target;
         const status = document.getElementById('status');
-        status.textContent = "Sending...";
+            const currentLang = window.getCurrentLanguage ? window.getCurrentLanguage() : 'en';
+            const langTranslations = typeof translations !== 'undefined' ? translations[currentLang] : null;
+            status.textContent = langTranslations?.contactSending || "Sending...";
 
         const fd = new FormData(form);
         const payload = Object.fromEntries(fd.entries());
@@ -78,11 +80,15 @@ if (contactForm) {
             if (error) throw error;
             if (!data || !data.ok) throw new Error(data?.error || "Failed");
             
-            status.textContent = "Received. We'll get back to you soon.";
+            const currentLang = window.getCurrentLanguage ? window.getCurrentLanguage() : 'en';
+            const langTranslations = typeof translations !== 'undefined' ? translations[currentLang] : null;
+            status.textContent = langTranslations?.contactSuccess || "Received. We'll get back to you soon.";
             form.reset();
         } catch (err) {
             console.error(err);
-            status.textContent = "Failed to send. Try again.";
+            const currentLang = window.getCurrentLanguage ? window.getCurrentLanguage() : 'en';
+            const langTranslations = typeof translations !== 'undefined' ? translations[currentLang] : null;
+            status.textContent = langTranslations?.contactError || "Failed to send. Try again.";
         }
     });
 }

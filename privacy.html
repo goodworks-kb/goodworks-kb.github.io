@@ -42,6 +42,7 @@
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         .legal-page {
@@ -146,9 +147,9 @@
             <div class="nav-content">
                 <a href="index.html" class="logo" aria-label="Good Works KB Home"><img src="assets/logo-wide.png" alt="Good Works KB - Professional Web Design and Development Services" class="logo-wide-img" width="200" height="50"></a>
                 <ul class="nav-menu">
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="index.html#services" data-i18n="navServices">Services</a></li>
+                    <li><a href="index.html#about" data-i18n="navAbout">About</a></li>
+                    <li><a href="index.html#contact" data-i18n="navContact">Contact</a></li>
                 </ul>
                 <button class="nav-toggle" aria-label="Toggle navigation">
                     <span></span>
@@ -162,7 +163,7 @@
     <!-- Privacy Policy Content -->
     <section class="legal-page">
         <div class="legal-content">
-            <a href="index.html" class="back-link">← Back to Home</a>
+            <a href="index.html" class="back-link" data-i18n="backToHome">← Back to Home</a>
             <h1>Privacy Policy</h1>
             <p class="last-updated">Last Updated: January 30, 2026</p>
             
@@ -269,15 +270,21 @@
                 <div class="footer-logo">
                     <img src="assets/logo-square-black.png" alt="Good Works KB - Professional Web Design and Development Services" width="50" height="50" loading="lazy">
                 </div>
-                <p>&copy; 2026 Good Works KB. All rights reserved.</p>
+                <p>&copy; 2026 Good Works KB. <span data-i18n="footerRights">All rights reserved.</span></p>
                 <div style="margin-top: 1rem;">
-                    <a href="privacy.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; margin: 0 1rem;">Privacy Policy</a>
-                    <a href="terms.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; margin: 0 1rem;">Terms of Service</a>
+                    <a href="privacy.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; margin: 0 1rem;" data-i18n="footerPrivacy">Privacy Policy</a>
+                    <a href="terms.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; margin: 0 1rem;" data-i18n="footerTerms">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Translations - Must load before language switcher -->
+    <script src="translations.js"></script>
+    
+    <!-- Language Switcher - Must load before other scripts -->
+    <script src="language-switcher.js"></script>
+    
     <!-- GDPR Cookie Consent - Must load before analytics -->
     <script src="consent.js"></script>
     
