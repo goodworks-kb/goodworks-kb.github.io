@@ -72,3 +72,4 @@ goodworks-kb.github.io/
 
 This repository is set up for GitHub Pages. Simply push your changes to the `main` branch and your site will be available at:
 `https://goodworks-kb.github.io`
+Automated cursor-agent change test.
