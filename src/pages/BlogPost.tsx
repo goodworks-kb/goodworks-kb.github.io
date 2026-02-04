@@ -6,6 +6,7 @@ import { Components } from 'react-markdown'
 import { Language } from '../lib/language'
 import { getTranslation } from '../lib/language'
 import { supabase } from '../lib/supabase'
+import ContactForm from '../components/ContactForm'
 
 interface BlogPostProps {
   language: Language
@@ -170,26 +171,31 @@ export default function BlogPost({ language }: BlogPostProps) {
   const displayDate = formatDate(post.published_at || post.created_at)
 
   return (
-    <section className="blog-post">
-      <div className="container">
-        <div className="blog-post-content">
-          <div className="blog-post-header">
-            <h1 className="blog-post-title">{post.title}</h1>
-            {displayDate && <p className="blog-post-meta">{displayDate}</p>}
-          </div>
-          {post.featured_image_url && (
-            <img src={post.featured_image_url} alt={post.title} className="blog-post-image" />
-          )}
-          <div className="blog-post-body">
-            <ReactMarkdown 
-              components={markdownComponents}
-              rehypePlugins={[rehypeSanitize]}
-            >
-              {post.content}
-            </ReactMarkdown>
+    <>
+      <section className="blog-post">
+        <div className="container">
+          <div className="blog-post-content">
+            <div className="blog-post-header">
+              <h1 className="blog-post-title">{post.title}</h1>
+              {displayDate && <p className="blog-post-meta">{displayDate}</p>}
+            </div>
+            {post.featured_image_url && (
+              <img src={post.featured_image_url} alt={post.title} className="blog-post-image" />
+            )}
+            <div className="blog-post-body">
+              <ReactMarkdown 
+                components={markdownComponents}
+                rehypePlugins={[rehypeSanitize]}
+              >
+                {post.content}
+              </ReactMarkdown>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      
+      {/* Contact Form */}
+      <ContactForm language={language} showTitle={true} />
+    </>
   )
 }

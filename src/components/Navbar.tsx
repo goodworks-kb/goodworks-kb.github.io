@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import LanguageSwitcher from './LanguageSwitcher'
 import { Language } from '../lib/language'
 import { getTranslation } from '../lib/language'
@@ -12,6 +12,7 @@ interface NavbarProps {
 export default function Navbar({ language, setLanguage }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
 
   useEffect(() => {
     setIsMenuOpen(false)
@@ -25,9 +26,26 @@ export default function Navbar({ language, setLanguage }: NavbarProps) {
     e.preventDefault()
     handleNavClick()
     
-    // If we're not on the home page, navigate there first
+    // If we're not on the home page, navigate there first, then scroll
     if (location.pathname !== '/') {
-      window.location.href = `/#/${anchorId}`
+      navigate('/')
+      // Wait for navigation and DOM to be ready, then scroll
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          const element = document.getElementById(anchorId)
+          if (element) {
+            // Scroll to top first, then to element (ensures we're on home page)
+            window.scrollTo({ top: 0, behavior: 'instant' })
+            setTimeout(() => {
+              const offsetTop = element.offsetTop - 80
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth',
+              })
+            }, 50)
+          }
+        }, 200)
+      })
       return
     }
     
