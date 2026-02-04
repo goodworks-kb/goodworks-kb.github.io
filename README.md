@@ -51,22 +51,36 @@ The `-o` flag automatically opens your browser.
 
 ```
 goodworks-kb.github.io/
-├── index.html          # Main HTML file
-├── styles.css          # Stylesheet
-├── script.js           # JavaScript functionality
-├── assets/
-│   └── gwkb-grey.png   # Logo
-├── serve.sh            # Local server script
-└── README.md           # This file
+├── index.html              # Main HTML file
+├── privacy.html            # Privacy Policy page
+├── terms.html             # Terms of Service page
+├── styles.css             # Stylesheet
+├── script.js              # JavaScript functionality
+├── translations.js        # Multi-language translations
+├── language-switcher.js   # Language switching functionality
+├── consent.js             # GDPR cookie consent system
+├── assets/                # Images and assets
+│   ├── logo-wide.png
+│   ├── logo-square-*.png
+│   ├── headshot-*.PNG
+│   └── ...
+├── serve.sh               # Local server script
+├── CHANGELOG.md           # Version history
+└── README.md              # This file
 ```
 
 ## Features
 
 - ✅ Responsive design (mobile, tablet, desktop)
 - ✅ Smooth scrolling navigation
-- ✅ Contact form
+- ✅ Contact form with Supabase integration
 - ✅ Modern, professional design
 - ✅ SEO-friendly structure
+- ✅ Multi-language support (English, Korean, Spanish)
+- ✅ Language switcher with dropdown menu
+- ✅ Privacy Policy and Terms of Service pages
+- ✅ GDPR-compliant cookie consent
+- ✅ Google Analytics integration (with consent)
 
 ## Deployment
 

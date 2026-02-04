@@ -1,6 +1,6 @@
 {
   "name": "goodworks-kb",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Good Works KB - Website Building Services Landing Page",
   "scripts": {
     "serve": "npx --yes live-server --port=8000 --open=/ --watch=.",
