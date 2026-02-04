@@ -146,6 +146,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Strong and emphasis styling
   - Responsive markdown styles for mobile devices
 
+- **Contact Form Integration**
+  - Created reusable `ContactForm` component for better code organization
+  - Added contact form to blog post pages at the bottom
+  - Contact form appears after blog post content on all post pages
+  - Maintains same functionality, styling, and Supabase integration as homepage form
+  - Fully translated and supports all languages
+  - Configurable title display via `showTitle` prop
+
 #### Routing System
 - **React Router with HashRouter**
   - Hash-based routing (`/#/blog`) for GitHub Pages compatibility
@@ -222,6 +230,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Fixed anchor link scrolling with HashRouter
   - Proper navigation between pages
   - Correct handling of external vs internal links
+  - Fixed navigation from blog posts to homepage anchor links (Services, About, Contact)
+  - Improved anchor link handling when navigating from other pages
+  - Added hash navigation support in Home component for direct hash links
+
+- **Navigation**
+  - Fixed header button clicks from blog posts - now properly redirects to homepage then scrolls to anchor
+  - Improved smooth scrolling behavior across page transitions
+  - Better handling of anchor links when navigating between pages
+  - Fixed "jump to nothing" bug when clicking navigation links from blog posts
+
+- **Build & Deployment**
+  - Fixed TypeScript compilation error (unused Link import)
+  - Fixed GitHub Actions deployment workflow - added required environment configuration
+  - Fixed asset loading in development vs production builds
 
 ### Technical Details
 
@@ -249,16 +271,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `src/lib/supabase.ts` - Supabase client
 - `src/lib/language.ts` - Language utilities
 - `src/lib/translations.ts` - Translation data
-- `src/components/` - All React components
-- `src/pages/` - Page components
+- `src/components/ContactForm.tsx` - Reusable contact form component
+- `src/components/` - All React components (Layout, Navbar, Footer, LanguageSwitcher, ConsentBar)
+- `src/pages/` - Page components (Home, BlogList, BlogPost, Privacy, Terms)
 - `.env.example` - Environment variable template
 - `.github/workflows/deploy.yml` - GitHub Actions workflow
 
 #### Modified Files
-- `package.json` - Updated with new dependencies and scripts
+- `package.json` - Updated with new dependencies and scripts, version bumped to 0.2.0
 - `index.html` - Converted to Vite template
 - `README.md` - Complete rewrite with migration guide
 - `.gitignore` - Updated for Vite/React project
+- `src/pages/Home.tsx` - Refactored to use ContactForm component
+- `src/pages/BlogPost.tsx` - Added ContactForm component at bottom
+- `src/components/Navbar.tsx` - Improved anchor link navigation handling
+- `vite.config.ts` - Fixed base path configuration for dev vs production
+- `.github/workflows/deploy.yml` - Added environment configuration for GitHub Pages
 
 #### Removed Files
 - `script.js` - Migrated to React components
