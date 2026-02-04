@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import { Language } from '../lib/language'
 import { getTranslation } from '../lib/language'
 import { supabase } from '../lib/supabase'
